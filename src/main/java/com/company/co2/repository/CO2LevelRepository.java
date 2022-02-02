@@ -8,5 +8,5 @@ import java.util.List;
 public interface CO2LevelRepository extends JpaRepository<CO2Level, Long> {
     List<CO2Level> findByCityOrderByDetectionDateDesc(String city);
 
-    List<CO2Level> findByDistrictOrderByDetectionDateDesc(String district);
+    List<CO2Level> findByCityAndDistrictOrderByDetectionDateDesc(String city, String district);
 }
